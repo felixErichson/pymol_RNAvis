@@ -65,6 +65,8 @@ def make_dialog():
         cmd.set("ray_trace_mode","3")
         cmd.set_color("my_blue", "[103,169,207]")
         cmd.set ("cartoon_ladder_color","my_blue")
+        cmd.set_color("don_green", "[108,189,129]")
+        cmd.set_color("acc_red", "[194,84,73]")
             
         if form.label_check.isChecked() == True:
             cmd.select("dye_bases","resn RUM+RGO")
@@ -73,10 +75,10 @@ def make_dialog():
             cmd.hide("sticks","dye_bases and name O4+H3+O2+H6+H1'+H2'1+HO'2+O2'+H4'+N3+C2+C4+C6+H6+N1+C1'+O4'+C3'+C4'+C5'+H5'+H5'2+O5'+O1P+O2P+P+H22+H8+H21+N2+N7+N9+H73")
             cmd.select("d_cy5","resn RUM+C5W")
             cmd.select("d_cy3","resn RGO+C3W")
-            cmd.color("red","d_cy5")
-            cmd.color("green","d_cy3")
-            cmd.set ("cartoon_ladder_color","red","d_cy5")
-            cmd.set ("cartoon_ladder_color","green","d_cy3")
+            cmd.color("acc_red","d_cy5")
+            cmd.color("don_green","d_cy3")
+            cmd.set ("cartoon_ladder_color","acc_red","d_cy5")
+            cmd.set ("cartoon_ladder_color","don_green","d_cy3")
         
         if len(resi_list) != 0:
               hpresi = "resi "
