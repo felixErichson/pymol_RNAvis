@@ -79,6 +79,7 @@ def make_dialog():
             cmd.color("don_green","d_cy3")
             cmd.set ("cartoon_ladder_color","acc_red","d_cy5")
             cmd.set ("cartoon_ladder_color","don_green","d_cy3")
+            cmd.set("cartoon_ring_transparency","0.7")
         
         if len(resi_list) != 0:
               hpresi = "resi "
@@ -89,8 +90,9 @@ def make_dialog():
               cmd.select("contact", hpresi)
               #cmd.color("hotpink", "contact")
               cmd.set ("cartoon_ladder_color","hotpink","contact")
-        
-            
+              cmd.set("cartoon_ring_mode","3","contact")
+              cmd.color("hotpink","contact")
+              
         resi_list.clear()
     
     form.addButton.clicked.connect(add_resi)
